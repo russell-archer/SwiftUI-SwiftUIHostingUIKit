@@ -30,10 +30,17 @@ struct TextView: UIViewRepresentable {
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            TextView(text: "Hello!")  // Use our TextView - simple!
-            Spacer()
+        NavigationView {
+            VStack {
+                // Navigate to a UIViewController wrapped with UIViewControllerRepresentable
+                NavigationLink(destination: HelloViewController()) { Text("Goto wrapped UIViewController") }
+                
+                TextView(text: "Hello!")  // Use our TextView - simple!
+                Spacer()
+            }
+            .padding()
         }
+        .navigationBarTitle(Text("UIViewRepresentable"))
     }
 }
 

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14865.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14819.2"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HelloViewController-->
+        <scene sceneID="Wb1-MH-Q0F">
+            <objects>
+                <viewController storyboardIdentifier="HelloViewController" title="HelloViewController" id="FZ5-04-ukF" customClass="HelloViewController" customModule="SwiftUI_SwiftUIHostingUIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NOd-ae-N6E">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Say Hello..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0D-Pn-qZF">
+                                <rect key="frame" x="20" y="102" width="374" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8h-1f-jch">
+                                <rect key="frame" x="20" y="145" width="374" height="30"/>
+                                <state key="normal" title="Say Hello"/>
+                                <connections>
+                                    <action selector="sayHelloTapped:" destination="FZ5-04-ukF" eventType="touchUpInside" id="Mon-ql-9aJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1uL-zF-4AI" firstAttribute="trailing" secondItem="Y0D-Pn-qZF" secondAttribute="trailing" constant="20" id="45y-R9-xCX"/>
+                            <constraint firstItem="Y0D-Pn-qZF" firstAttribute="top" secondItem="1uL-zF-4AI" secondAttribute="top" constant="58" id="IO8-FD-7UZ"/>
+                            <constraint firstItem="w8h-1f-jch" firstAttribute="leading" secondItem="1uL-zF-4AI" secondAttribute="leading" constant="20" id="KSM-pA-6NK"/>
+                            <constraint firstItem="w8h-1f-jch" firstAttribute="top" secondItem="Y0D-Pn-qZF" secondAttribute="bottom" constant="16" id="kOJ-IX-ilx"/>
+                            <constraint firstItem="Y0D-Pn-qZF" firstAttribute="leading" secondItem="1uL-zF-4AI" secondAttribute="leading" constant="20" id="sqy-Ei-1Yb"/>
+                            <constraint firstItem="1uL-zF-4AI" firstAttribute="trailing" secondItem="w8h-1f-jch" secondAttribute="trailing" constant="20" id="xnY-XS-WL2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1uL-zF-4AI"/>
+                    </view>
+                    <connections>
+                        <outlet property="helloLabel" destination="Y0D-Pn-qZF" id="i5K-C6-wLQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jsJ-84-mQi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-275.36231884057975" y="-26.116071428571427"/>
+        </scene>
+    </scenes>
+</document>
