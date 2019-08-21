@@ -72,18 +72,18 @@ ___
 ## Wrapping a UIViewController with UIViewControllerRepresentable
 To demonstrate the basic principles involved, do the following in any SwiftUI app:
 
-Create a **Storyboard** and then add a **UIViewController** to the storyboard in **Interface Builder**.
-Create the UI in the “old non-SwiftUI way” using Interface Builder:
+* Create a **Storyboard** and then add a **UIViewController** to the storyboard in **Interface Builder**.
+* Create the UI in the “old non-SwiftUI way” using Interface Builder:
 
 ![](./readme-assets/image02.jpg)
 
-Give the UIViewController a **Storyboard ID** (I called mine **HelloViewController**).
-Create a new **UIViewController Cocoa Touch Class** called **HelloViewController**.
-In Interface Builder, set the **Custom Class** for the new view controller as **HelloViewController**:
+* Give the UIViewController a **Storyboard ID** (I called mine **HelloViewController**).
+* Create a new **UIViewController Cocoa Touch Class** called **HelloViewController**.
+* In Interface Builder, set the **Custom Class** for the new view controller as **HelloViewController**:
 
 ![](./readme-assets/image03.jpg)
 
-Create an **Outlet** for the **UILabel** and an **Action** for the **UIButton** in the custom class:
+* Create an **Outlet** for the **UILabel** and an **Action** for the **UIButton** in the custom class:
 
 ``` swift
 //
@@ -113,7 +113,7 @@ final class HelloViewController: UIViewController {
 }
 ```
 
-Implement the **UIViewControllerRepresentable** protocol in **HelloViewController**:
+* Implement the **UIViewControllerRepresentable** protocol in **HelloViewController**:
 
 ``` swift
 extension HelloViewController: UIViewControllerRepresentable {
@@ -130,7 +130,7 @@ extension HelloViewController: UIViewControllerRepresentable {
 }
 ```
 
-Update the main SwiftUI **ContentView** to allow navigation to the new UIViewController:
+* Update the main SwiftUI **ContentView** to allow navigation to the new UIViewController:
 
 ``` swift
 struct ContentView: View {
@@ -149,6 +149,7 @@ struct ContentView: View {
     }
 }
 ```
+
 If you run the app you should see:
 
 ![](./readme-assets/final.gif)
