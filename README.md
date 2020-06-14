@@ -1,6 +1,6 @@
 # SwiftUI with UIKit Demo
 ## Integrating UIKit-based content (UIView or UIViewController) in SwiftUI apps 
-**(Updated for Xcode 11 Beta 6)**
+**(Updated for Xcode 11 Beta 7)**
 
 Apple provides two protocols which allow you to present **UIView** or **UIViewController** code in a SwiftUI app:
 
